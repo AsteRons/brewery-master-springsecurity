@@ -41,6 +41,7 @@ guru\sfg\brewery\domain\Beer.class
 guru\sfg\brewery\web\model\BeerDto.class
 guru\sfg\brewery\web\model\CustomerDto$CustomerDtoBuilder.class
 guru\sfg\brewery\web\mappers\BeerMapperImpl.class
+guru\sfg\brewery\config\SecurityConfig.class
 guru\sfg\brewery\repositories\BeerInventoryRepository.class
 guru\sfg\brewery\services\BreweryServiceImpl.class
 guru\sfg\brewery\web\mappers\BeerOrderLineMapperImpl.class
