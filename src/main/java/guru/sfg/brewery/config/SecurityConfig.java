@@ -20,7 +20,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 public class SecurityConfig  extends WebSecurityConfigurerAdapter{
 
     PasswordEncoder passwordEncoder() {
-        return new LdapShaPasswordEncoder;
+        return new LdapShaPasswordEncoder();
     }
 
     @Override
