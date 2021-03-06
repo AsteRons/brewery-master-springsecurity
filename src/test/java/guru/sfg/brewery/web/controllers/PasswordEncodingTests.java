@@ -19,6 +19,7 @@ public class PasswordEncodingTests {
         PasswordEncoder bcrypt = new BCryptPasswordEncoder();
         System.out.println(bcrypt.encode(PASSWORD));
         System.out.println(bcrypt.encode(PASSWORD));
+        System.out.println(bcrypt.encode("guru"));
 
     }
 
@@ -35,7 +36,7 @@ public class PasswordEncodingTests {
         PasswordEncoder ldap = new LdapShaPasswordEncoder();
         System.out.println(ldap.encode(PASSWORD));
         System.out.println(ldap.encode(PASSWORD));
-
+        System.out.println(ldap.encode("tiger"));
         String encodePWD = ldap.encode(PASSWORD);
 
         assertTrue(ldap.matches(PASSWORD, encodePWD));

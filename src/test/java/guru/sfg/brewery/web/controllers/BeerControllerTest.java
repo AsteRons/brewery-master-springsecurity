@@ -116,6 +116,24 @@ class BeerControllerTest {
     }
 
     @Test
+    void initCreationFormWithSpring() throws Exception{
+        mockMvc.perform(get("/beers/new").with((httpBasic("spring","guru"))))
+                .andExpect(status().isOk())
+                .andExpect(view().name("beers/createBeer"))
+                .andExpect(model().attributeExists("beer"));
+        verifyZeroInteractions(beerRepository);
+    }
+
+    @Test
+    void initCreationFormWithScott() throws Exception{
+        mockMvc.perform(get("/beers/new").with((httpBasic("scott","tiger"))))
+                .andExpect(status().isOk())
+                .andExpect(view().name("beers/createBeer"))
+                .andExpect(model().attributeExists("beer"));
+        verifyZeroInteractions(beerRepository);
+    }
+
+    @Test
     void processCreationForm() throws Exception {
         when(beerRepository.save(ArgumentMatchers.any())).thenReturn(Beer.builder().id(uuid).build());
         mockMvc.perform(post("/beers/new"))
