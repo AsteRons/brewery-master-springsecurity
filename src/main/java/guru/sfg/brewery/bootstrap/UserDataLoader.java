@@ -1,6 +1,5 @@
 package guru.sfg.brewery.bootstrap;
 
-
 import guru.sfg.brewery.domain.security.Authority;
 import guru.sfg.brewery.domain.security.User;
 import guru.sfg.brewery.repositories.security.AuthorityRepository;
@@ -43,8 +42,6 @@ public class UserDataLoader implements CommandLineRunner {
                 .password(passwordEncoder.encode("tiger"))
                 .authority(customer)
                 .build());
-
-       // logger.debug("Users Loaded: " + userRepository.count());
 
     }
 
