@@ -11,7 +11,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @SpringBootTest
-public class  extends BaseIT {
+public class BeerRestControllerIT extends BaseIT {
 
     @Test
     void deleteBeerHttpBasic() throws Exception{
