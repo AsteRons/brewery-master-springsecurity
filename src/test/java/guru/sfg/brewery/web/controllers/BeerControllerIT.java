@@ -17,9 +17,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
-/**
- * Created by jt on 6/12/20.
- */
 @SpringBootTest
 public class BeerControllerIT extends BaseIT{
 

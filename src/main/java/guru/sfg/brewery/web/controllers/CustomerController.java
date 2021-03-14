@@ -1,11 +1,10 @@
-
-
 package guru.sfg.brewery.web.controllers;
 
 import guru.sfg.brewery.domain.Customer;
 import guru.sfg.brewery.repositories.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -32,7 +31,8 @@ public class CustomerController {
         model.addAttribute("customer", Customer.builder().build());
         return "customers/findCustomers";
     }
-    
+
+    @Secured({"ROLE_ADMIN", "ROLE_CUSTOMER"})
     @GetMapping
     public String processFindFormReturnMany(Customer customer, BindingResult result, Model model){
         // find customers by name
@@ -53,7 +53,7 @@ public class CustomerController {
         }
     }
 
-   @GetMapping("/{customerId}")
+    @GetMapping("/{customerId}")
     public ModelAndView showCustomer(@PathVariable UUID customerId) {
         ModelAndView mav = new ModelAndView("customers/customerDetails");
         //ToDO: Add Service
@@ -67,6 +67,7 @@ public class CustomerController {
         return "customers/createCustomer";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/new")
     public String processCreationForm(Customer customer) {
         //ToDO: Add Service
@@ -79,11 +80,11 @@ public class CustomerController {
     }
 
     @GetMapping("/{customerId}/edit")
-   public String initUpdateCustomerForm(@PathVariable UUID customerId, Model model) {
-       if(customerRepository.findById(customerId).isPresent())
-          model.addAttribute("customer", customerRepository.findById(customerId).get());
-       return "customers/createOrUpdateCustomer";
-   }
+    public String initUpdateCustomerForm(@PathVariable UUID customerId, Model model) {
+        if(customerRepository.findById(customerId).isPresent())
+            model.addAttribute("customer", customerRepository.findById(customerId).get());
+        return "customers/createOrUpdateCustomer";
+    }
 
     @PostMapping("/{beerId}/edit")
     public String processUpdationForm(@Valid Customer customer, BindingResult result) {
