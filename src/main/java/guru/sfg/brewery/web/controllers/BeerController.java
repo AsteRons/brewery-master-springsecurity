@@ -50,6 +50,7 @@ public class BeerController {
     private final BeerRepository beerRepository;
     private final BeerInventoryRepository beerInventoryRepository;
 
+
     @BeerReadPermission
     @RequestMapping("/find")
     public String findBeers(Model model) {
@@ -79,6 +80,7 @@ public class BeerController {
             return "beers/beerList";
         }
     }
+
 
     @BeerReadPermission
     @GetMapping("/{beerId}")
