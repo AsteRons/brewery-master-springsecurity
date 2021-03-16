@@ -3,12 +3,14 @@ guru\sfg\brewery\repositories\security\RoleRepository.class
 guru\sfg\brewery\web\mappers\BeerOrderLineMapper.class
 guru\sfg\brewery\bootstrap\UserDataLoader.class
 guru\sfg\brewery\repositories\BeerOrderLineRepository.class
+guru\sfg\brewery\security\perms\BeerCreatePermission.class
 guru\sfg\brewery\web\model\BeerStyleEnum.class
 guru\sfg\brewery\web\model\OrderStatusUpdate$OrderStatusUpdateBuilder.class
 guru\sfg\brewery\domain\OrderStatusEnum.class
 guru\sfg\brewery\repositories\BeerOrderRepository.class
 guru\sfg\brewery\web\mappers\BeerOrderLineMapperDecorator.class
 guru\sfg\brewery\domain\BeerInventory$BeerInventoryBuilder.class
+guru\sfg\brewery\security\perms\BeerDeletePermission.class
 guru\sfg\brewery\security\JpaUserDetailsService.class
 guru\sfg\brewery\repositories\security\AuthorityRepository.class
 guru\sfg\brewery\web\controllers\CustomerController.class
@@ -34,6 +36,7 @@ guru\sfg\brewery\domain\BeerOrderLine.class
 guru\sfg\brewery\web\model\BeerDto.class
 guru\sfg\brewery\web\mappers\BeerMapperImpl.class
 guru\sfg\brewery\domain\security\User$UserBuilder.class
+guru\sfg\brewery\security\perms\BeerReadPermission.class
 guru\sfg\brewery\repositories\BeerInventoryRepository.class
 guru\sfg\brewery\web\mappers\BeerOrderLineMapperImpl.class
 guru\sfg\brewery\web\model\BeerOrderDto$BeerOrderDtoBuilder.class
@@ -56,8 +59,8 @@ guru\sfg\brewery\web\model\OrderStatusUpdate.class
 guru\sfg\brewery\web\model\CustomerDto.class
 guru\sfg\brewery\web\mappers\DateMapper.class
 guru\sfg\brewery\web\controllers\BeerController.class
+guru\sfg\brewery\security\perms\BeerUpdatePermission.class
 guru\sfg\brewery\domain\Customer.class
-guru\sfg\brewery\security\RestHeaderAuthFilter.class
 guru\sfg\brewery\domain\BeerOrderLine$BeerOrderLineBuilder.class
 guru\sfg\brewery\domain\Beer.class
 guru\sfg\brewery\web\model\CustomerDto$CustomerDtoBuilder.class

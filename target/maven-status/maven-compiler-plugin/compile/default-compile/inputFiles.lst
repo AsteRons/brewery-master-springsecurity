@@ -13,7 +13,8 @@ C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurit
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\repositories\security\UserRepository.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\web\mappers\BeerOrderMapper.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\web\controllers\BeerController.java
-C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\security\RestHeaderAuthFilter.java
+C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\security\perms\BeerReadPermission.java
+C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\security\perms\BeerDeletePermission.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\domain\Brewery.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\web\model\OrderStatusEnum.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\services\BreweryServiceImpl.java
@@ -30,6 +31,7 @@ C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurit
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\security\SfgPasswordEncoderFactories.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\domain\OrderStatusEnum.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\web\model\BeerPagedList.java
+C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\security\perms\BeerUpdatePermission.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\domain\security\Authority.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\web\mappers\BeerMapperDecorator.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\web\model\CustomerDto.java
@@ -49,6 +51,7 @@ C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurit
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\web\model\BeerOrderLineDto.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\web\model\BeerOrderPagedList.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\web\controllers\CustomerController.java
+C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\security\perms\BeerCreatePermission.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\SfgBreweryUiApplication.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\repositories\BeerOrderRepository.java
 C:\Users\MaciejRudnik\Desktop\Prywatne\Repozytorium\brewery-master-springsecurity\src\main\java\guru\sfg\brewery\domain\BeerOrderLine.java
