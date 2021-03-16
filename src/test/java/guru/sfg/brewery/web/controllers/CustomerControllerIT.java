@@ -15,7 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @SpringBootTest
-public class CustomerControllerIT extends BaseIT{
+public class CustomerControllerIT extends BaseIT {
 
     @DisplayName("List Customers")
     @Nested
@@ -74,4 +74,5 @@ public class CustomerControllerIT extends BaseIT{
                     .andExpect(status().isUnauthorized());
         }
     }
+
 }

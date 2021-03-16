@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @WebMvcTest
-class IndexControllerIT extends BaseIT{
+public class IndexControllerIT extends BaseIT {
 
     @MockBean
     BeerRepository beerRepository;

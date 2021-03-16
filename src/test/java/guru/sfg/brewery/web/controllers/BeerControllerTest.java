@@ -41,7 +41,6 @@ import java.util.UUID;
 import static org.hamcrest.Matchers.*;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
-import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -108,25 +107,7 @@ class BeerControllerTest {
 
     @Test
     void initCreationForm() throws Exception {
-        mockMvc.perform(get("/beers/new").with((httpBasic("user","password"))))
-                .andExpect(status().isOk())
-                .andExpect(view().name("beers/createBeer"))
-                .andExpect(model().attributeExists("beer"));
-        verifyZeroInteractions(beerRepository);
-    }
-
-    @Test
-    void initCreationFormWithSpring() throws Exception{
-        mockMvc.perform(get("/beers/new").with((httpBasic("spring","guru"))))
-                .andExpect(status().isOk())
-                .andExpect(view().name("beers/createBeer"))
-                .andExpect(model().attributeExists("beer"));
-        verifyZeroInteractions(beerRepository);
-    }
-
-    @Test
-    void initCreationFormWithScott() throws Exception{
-        mockMvc.perform(get("/beers/new").with((httpBasic("scott","tiger"))))
+        mockMvc.perform(get("/beers/new"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("beers/createBeer"))
                 .andExpect(model().attributeExists("beer"));

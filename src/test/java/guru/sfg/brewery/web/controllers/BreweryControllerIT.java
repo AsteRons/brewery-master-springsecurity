@@ -63,5 +63,4 @@ class BreweryControllerIT extends BaseIT {
         mockMvc.perform(get("/brewery/api/v1/breweries"))
                 .andExpect(status().isUnauthorized());
     }
-
 }
