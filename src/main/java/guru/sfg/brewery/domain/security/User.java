@@ -49,16 +49,6 @@ public class User implements UserDetails, CredentialsContainer {
     }
 
     @Override
-    public String getPassword() {
-        return null;
-    }
-
-    @Override
-    public String getUsername() {
-        return null;
-    }
-
-    @Override
     public boolean isAccountNonExpired() {
         return this.accountNonExpired;
     }
