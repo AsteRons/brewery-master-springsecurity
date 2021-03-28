@@ -47,12 +47,6 @@
         <name>Spring Framework Guru</name>
     </organization>
 
-    <developers>
-        <developer>
-            <name>John Thompson</name>
-            <organization>Spring Framework Guru</organization>
-        </developer>
-    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
