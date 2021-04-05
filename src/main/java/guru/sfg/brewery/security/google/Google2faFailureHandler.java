@@ -9,9 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Created by jt on 7/24/20.
- */
+
 @Slf4j
 public class Google2faFailureHandler implements AuthenticationFailureHandler {
 
