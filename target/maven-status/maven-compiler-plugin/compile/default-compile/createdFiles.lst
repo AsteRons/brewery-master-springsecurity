@@ -1,7 +1,6 @@
 guru\sfg\brewery\services\BeerService.class
 guru\sfg\brewery\repositories\security\RoleRepository.class
 guru\sfg\brewery\web\mappers\BeerOrderLineMapper.class
-guru\sfg\brewery\bootstrap\UserDataLoader.class
 guru\sfg\brewery\repositories\BeerOrderLineRepository.class
 guru\sfg\brewery\security\perms\BeerCreatePermission.class
 guru\sfg\brewery\web\model\BeerStyleEnum.class
@@ -30,6 +29,7 @@ guru\sfg\brewery\services\BeerOrderServiceImpl.class
 guru\sfg\brewery\domain\BaseEntity.class
 guru\sfg\brewery\web\mappers\BeerMapper.class
 guru\sfg\brewery\web\model\BaseItem.class
+guru\sfg\brewery\security\google\Google2faFilter.class
 guru\sfg\brewery\domain\security\Authority.class
 guru\sfg\brewery\web\mappers\BeerMapperDecorator.class
 guru\sfg\brewery\domain\BeerOrderLine.class
@@ -63,6 +63,7 @@ guru\sfg\brewery\security\perms\BeerUpdatePermission.class
 guru\sfg\brewery\domain\Customer.class
 guru\sfg\brewery\domain\BeerOrderLine$BeerOrderLineBuilder.class
 guru\sfg\brewery\domain\Beer.class
+guru\sfg\brewery\security\google\Google2faFailureHandler.class
 guru\sfg\brewery\web\model\CustomerDto$CustomerDtoBuilder.class
 guru\sfg\brewery\config\SecurityConfig.class
 guru\sfg\brewery\services\BreweryServiceImpl.class
