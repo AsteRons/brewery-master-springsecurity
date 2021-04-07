@@ -1,4 +1,32 @@
 -------------------------------------------------------------------------------
 Test set: guru.sfg.brewery.web.controllers.api.BeerOrderControllerTest
 -------------------------------------------------------------------------------
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.944 s - in guru.sfg.brewery.web.controllers.api.BeerOrderControllerTest
+Tests run: 17, Failures: 7, Errors: 0, Skipped: 4, Time elapsed: 1.093 s <<< FAILURE! - in guru.sfg.brewery.web.controllers.api.BeerOrderControllerTest
+getByOrderIdNotAuth  Time elapsed: 0.361 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<401> but was:<200>
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerTest.getByOrderIdNotAuth(BeerOrderControllerTest.java:152)
+
+listOrdersNoAuth  Time elapsed: 0.038 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<401> but was:<404>
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerTest.listOrdersNoAuth(BeerOrderControllerTest.java:144)
+
+listOrdersCustomerNOTAuth  Time elapsed: 0.045 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<403> but was:<200>
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerTest.listOrdersCustomerNOTAuth(BeerOrderControllerTest.java:138)
+
+createOrderUserNOTAuthCustomer  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<403> but was:<201>
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerTest.createOrderUserNOTAuthCustomer(BeerOrderControllerTest.java:110)
+
+createOrderNotAuth  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<401> but was:<201>
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerTest.createOrderNotAuth(BeerOrderControllerTest.java:71)
+
+listOrdersNotAuth  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<401> but was:<200>
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerTest.listOrdersNotAuth(BeerOrderControllerTest.java:117)
+
+getByOrderIdCustomerNOTAuth  Time elapsed: 0.047 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<403> but was:<200>
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerTest.getByOrderIdCustomerNOTAuth(BeerOrderControllerTest.java:182)
+

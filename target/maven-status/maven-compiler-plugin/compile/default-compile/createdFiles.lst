@@ -73,6 +73,7 @@ guru\sfg\brewery\web\model\BeerOrderDto.class
 guru\sfg\brewery\domain\security\Authority$AuthorityBuilder.class
 guru\sfg\brewery\web\mappers\BeerOrderMapperImpl.class
 guru\sfg\brewery\domain\security\Role$RoleBuilder.class
+guru\sfg\brewery\config\SecurityBeans.class
 guru\sfg\brewery\domain\BeerOrder.class
 guru\sfg\brewery\security\SfgPasswordEncoderFactories.class
 guru\sfg\brewery\domain\Brewery$BreweryBuilder.class

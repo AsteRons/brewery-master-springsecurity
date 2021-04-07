@@ -17,11 +17,10 @@ import org.springframework.security.web.session.SessionManagementFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @RequiredArgsConstructor
-@Configuration
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@Configuration
+//@EnableWebSecurity
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
 
     private final UserDetailsService userDetailsService;
     private final PersistentTokenRepository persistentTokenRepository;
@@ -37,7 +36,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.addFilterBefore(google2faFilter, SessionManagementFilter.class);
-                http
+
+        http
                 .authorizeRequests(authorize -> {
                     authorize
                             .antMatchers("/h2-console/**").permitAll() //do not use in production!
@@ -46,36 +46,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .anyRequest().authenticated()
                 .and()
-                        .formLogin(loginConfigurer -> {
-                            loginConfigurer
-                                    .loginProcessingUrl("/login")
-                                    .loginPage("/").permitAll()
-                                    .successForwardUrl("/")
-                                    .defaultSuccessUrl("/")
-                                    .failureUrl("/?error");
-                        })
-                        .logout(logoutConfigurer -> {
-                            logoutConfigurer
-                                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
-                                    .logoutSuccessUrl("/?logout")
-                                    .permitAll();
-                        })
+                .formLogin(loginConfigurer -> {
+                    loginConfigurer
+                            .loginProcessingUrl("/login")
+                            .loginPage("/").permitAll()
+                            .successForwardUrl("/")
+                            .defaultSuccessUrl("/")
+                            .failureUrl("/?error");
+                })
+                .logout(logoutConfigurer -> {
+                    logoutConfigurer
+                            .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
+                            .logoutSuccessUrl("/?logout")
+                            .permitAll();
+                })
                 .httpBasic()
-                        .and()
-                            .csrf()
-                            .ignoringAntMatchers("/h2-console/**", "/api/**")
-                        .and()
-                            .rememberMe()
-                            .tokenRepository(persistentTokenRepository)
-                            .userDetailsService(userDetailsService);
+                .and().csrf().ignoringAntMatchers("/h2-console/**", "/api/**")
+                .and().rememberMe()
+                .tokenRepository(persistentTokenRepository)
+                .userDetailsService(userDetailsService);
 
-                //h2 console config
-                http.headers().frameOptions().sameOrigin();
-    }
-
-    @Bean
-    PasswordEncoder passwordEncoder(){
-        return SfgPasswordEncoderFactories.createDelegatingPasswordEncoder();
+        //h2 console config
+        http.headers().frameOptions().sameOrigin();
     }
 
 }

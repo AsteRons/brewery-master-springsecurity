@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: guru.sfg.brewery.SfgBreweryUiApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.325 s - in guru.sfg.brewery.SfgBreweryUiApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.432 s - in guru.sfg.brewery.SfgBreweryUiApplicationTests

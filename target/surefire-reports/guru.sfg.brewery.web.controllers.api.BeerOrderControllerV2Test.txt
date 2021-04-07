@@ -1,4 +1,32 @@
 -------------------------------------------------------------------------------
 Test set: guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.458 s - in guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test
+Tests run: 8, Failures: 1, Errors: 4, Skipped: 0, Time elapsed: 0.438 s <<< FAILURE! - in guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test
+getByOrderIdNotAuth  Time elapsed: 0.114 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1004E: Method call: Method hasAuthority(java.lang.String) cannot be found on type java.lang.Object[]
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test.getByOrderIdNotAuth(BeerOrderControllerV2Test.java:88)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1004E: Method call: Method hasAuthority(java.lang.String) cannot be found on type java.lang.Object[]
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test.getByOrderIdNotAuth(BeerOrderControllerV2Test.java:88)
+
+getByOrderIdCustomerAuth  Time elapsed: 0.034 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1004E: Method call: Method hasAuthority(java.lang.String) cannot be found on type java.lang.Object[]
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test.getByOrderIdCustomerAuth(BeerOrderControllerV2Test.java:110)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1004E: Method call: Method hasAuthority(java.lang.String) cannot be found on type java.lang.Object[]
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test.getByOrderIdCustomerAuth(BeerOrderControllerV2Test.java:110)
+
+getByOrderIdADMIN  Time elapsed: 0.038 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1004E: Method call: Method hasAuthority(java.lang.String) cannot be found on type java.lang.Object[]
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test.getByOrderIdADMIN(BeerOrderControllerV2Test.java:99)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1004E: Method call: Method hasAuthority(java.lang.String) cannot be found on type java.lang.Object[]
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test.getByOrderIdADMIN(BeerOrderControllerV2Test.java:99)
+
+listOrdersNotAuth  Time elapsed: 0.053 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<401> but was:<200>
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test.listOrdersNotAuth(BeerOrderControllerV2Test.java:57)
+
+getByOrderIdCustomerNOTAuth  Time elapsed: 0.049 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1004E: Method call: Method hasAuthority(java.lang.String) cannot be found on type java.lang.Object[]
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test.getByOrderIdCustomerNOTAuth(BeerOrderControllerV2Test.java:121)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1004E: Method call: Method hasAuthority(java.lang.String) cannot be found on type java.lang.Object[]
+	at guru.sfg.brewery.web.controllers.api.BeerOrderControllerV2Test.getByOrderIdCustomerNOTAuth(BeerOrderControllerV2Test.java:121)
+
